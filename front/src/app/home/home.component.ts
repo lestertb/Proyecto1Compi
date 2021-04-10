@@ -22,4 +22,17 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onKeydown(event) {
+    if(event.keyCode===9){
+      var fileArea = document.getElementById("file") as HTMLInputElement;
+      var val = fileArea.value,
+      start = fileArea.selectionStart,
+      end = fileArea.selectionEnd;
+      fileArea.value = val.substring(0, start) + ' ' + val.substring(end);
+      fileArea.selectionStart = fileArea.selectionEnd = start + 1;
+
+      return false;
+    }
+  }
+
 }
