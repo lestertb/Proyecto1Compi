@@ -1,0 +1,10 @@
+let
+    var x:int
+    bein
+    x :=3;
+    i ten
+        print(x
+    else
+        print(x)
+
+    x:=
