@@ -95,6 +95,12 @@ public interface miParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitType(miParser.TypeContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link miParser#simpleType}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSimpleType(miParser.SimpleTypeContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link miParser#arrayType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -184,6 +190,12 @@ public interface miParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitArrayLength(miParser.ArrayLengthContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link miParser#boolLiteral}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBoolLiteral(miParser.BoolLiteralContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link miParser#literal}.
 	 * @param ctx the parse tree

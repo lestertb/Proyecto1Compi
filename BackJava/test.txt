@@ -1,10 +1,13 @@
-let
-    var x:int
-    bein
-    x :=3;
-    i ten
-        print(x
-    else
-        print(x)
+int x = 5;
 
-    x:=
+string p = "SAPRISSA";
+
+while ( x == 5){
+ print(p);
+}
+
+if(x < 6){
+    print("nachito uapo");
+}
+
+r = 77;
