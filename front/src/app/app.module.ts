@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ApijavaService } from './services/apijava.service';
 
+import { NgTerminalModule } from 'ng-terminal';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { ApijavaService } from './services/apijava.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgTerminalModule
   ],
   providers: [ApijavaService],
   bootstrap: [AppComponent]

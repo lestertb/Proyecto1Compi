@@ -1,16 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ViewChild} from '@angular/core';
 import { ApijavaService } from '../services/apijava.service';
 import {TestModel} from '../models/testModel';
+
+import { NgTerminal } from 'ng-terminal';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
+
+  @ViewChild('term', { static: true }) child: NgTerminal;
 
   dataTest = new TestModel();
 
   textTXT : string;
+
+  textCMD = '';
 
   response: string;
 
@@ -19,7 +26,56 @@ export class HomeComponent implements OnInit {
   constructor(public AJservice: ApijavaService) {
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit() {
+
+    this.child.write('Here starts the terminal \r\n\r\nCreated by: Lester & Marco\r\n');
+    this.child.write('\r\nLM > ');
+
+    this.child.keyEventInput.subscribe(e => {
+
+     const ev = e.domEvent;
+     const printable = !ev.altKey && !ev.ctrlKey && !ev.metaKey;
+
+     if (ev.keyCode === 13) {
+       if (this.textCMD === '') {
+         this.child.write('\r\nLM > ');
+       }else {
+         this.AJservice.postTest(this.textCMD)
+         .subscribe(
+         (data1:any)=>{
+           this.AJservice.getTest()
+           .subscribe(
+             (data2:any) =>{
+               if (data2.content != '0 errors') {
+                 this.child.write('\r\n'+data2.content);
+               }
+             }
+           );
+           this.AJservice.getTest2()
+           .subscribe(
+             (data3:any) =>{
+             }
+           );
+         }
+         );
+         setTimeout(() => {
+                this.child.write('\r\nLM > ');
+                this.textCMD = '';
+              },
+         100);
+       }
+     } else if (ev.keyCode === 8) {
+         this.textCMD = this.textCMD.substr(0, this.textCMD.length-1);
+       // Do not delete the prompt
+       if (this.child.underlying.buffer.active.cursorX > 5) {
+         this.child.write('\b \b');
+       }
+     } else if (printable) {
+       this.child.write(e.key);
+       this.textCMD += e.key;
+     }
+
+   })
   }
 
   onKeydown(event) {
