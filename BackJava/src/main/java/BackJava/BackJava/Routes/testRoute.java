@@ -1,5 +1,7 @@
 package BackJava.BackJava.Routes;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.concurrent.atomic.AtomicLong;
 
 import BackJava.BackJava.Classes.MyErrorListener;
@@ -19,10 +21,15 @@ import javax.swing.*;
 public class testRoute {
 
     private static String res = "";
+    private static String res2 = "";
 
     @GetMapping("/test")
     public response greeting() {
         return new response(res);
+    }
+    @GetMapping("/test2")
+    public response greeting1() {
+        return new response(res2);
     }
 
     @PostMapping("/agregar")
@@ -30,14 +37,12 @@ public class testRoute {
 
         miScanner inst = null;
         miParser parser = null;
-        //ParseTree tree=null;
+        ParseTree tree=null;
 
-        CharStream input=null;
         CommonTokenStream tokens = null;
         MyErrorListener errorListener = null;
         try {
-            input = CharStreams.fromFileName("test.txt");
-            inst = new miScanner(input);
+            inst = new miScanner(CharStreams.fromString(test));
             tokens = new CommonTokenStream(inst);
             parser = new miParser(tokens);
 
@@ -49,26 +54,27 @@ public class testRoute {
             parser.removeErrorListeners();
             parser.addErrorListener ( errorListener );
 
-            /*try {
+            try {
                 tree = parser.program();
             }
             catch(RecognitionException e){
                 System.out.println("Error!!!");
                 e.printStackTrace();
-            }*/
+            }
 
-            if (!errorListener.hasErrors()) {
-                res = "Compilación Exitosa!!\n";
-                /*java.util.concurrent.Future<JFrame> treeGUI = org.antlr.v4.gui.Trees.inspect(tree, parser);
-                treeGUI.get().setVisible(true);*/
+            if ( !errorListener.hasErrors() ) {
+                res2 = "Compilacion exitosa\n";
+                //java.util.concurrent.Future<JFrame> treeGUI = org.antlr.v4.gui.Trees.inspect(tree, parser);
+                //treeGUI.get().setVisible(true);
+
+                res = errorListener.toString();
             }
             else {
-                res = "Compilación Fallida!!\n" + errorListener.toString();
+                res2 = "Compilacion fallida\n";
+                res = errorListener.toString();
             }
+        }
 
-        }
-        catch(Exception e) {
-            res = "Sucedió algún error";
-        }
+        catch(Exception e){System.out.println("No hay archivo");e.printStackTrace();}
     }
 }

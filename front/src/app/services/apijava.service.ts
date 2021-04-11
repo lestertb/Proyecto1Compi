@@ -22,5 +22,10 @@ export class ApijavaService {
       return this.http.post(`${this.urlRoot}/agregar`, textTxt);
   }
 
+  getTest2() {
+    return this.http.get(`http://${this.ip}:${this.port}/test2`);
+  }
+
+
 
 }

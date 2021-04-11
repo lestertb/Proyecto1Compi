@@ -14,6 +14,8 @@ export class HomeComponent implements OnInit {
 
   response: string;
 
+  response2: string;
+
   constructor(public AJservice: ApijavaService) {
   }
 
@@ -43,6 +45,13 @@ export class HomeComponent implements OnInit {
             .subscribe(
               (data2:any) =>{
                 this.response=data2.content;
+              }
+            );
+            this.AJservice.getTest2()
+            .subscribe(
+              (data3:any) =>{
+                //this.response=data2.content;
+                this.response2 = data3.content;
               }
             );
           }
