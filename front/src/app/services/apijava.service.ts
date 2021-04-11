@@ -18,5 +18,9 @@ export class ApijavaService {
     return this.http.get(`http://${this.ip}:${this.port}/test`);
   }
 
+  postTest(textTxt:string) {
+      return this.http.post(`${this.urlRoot}/agregar`, textTxt);
+  }
+
 
 }

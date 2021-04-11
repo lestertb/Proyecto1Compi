@@ -1,13 +1,1 @@
-int x = 5;
-
-string p = "SAPRISSA";
-
-while ( x == 5){
- print(p);
-}
-
-if(x < 6){
-    print("nachito uapo");
-}
-
-r = 77;
+int x=10

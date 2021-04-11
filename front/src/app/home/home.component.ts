@@ -10,13 +10,11 @@ export class HomeComponent implements OnInit {
 
   dataTest = new TestModel();
 
+  textTXT : string;
+
+  response: string;
+
   constructor(public AJservice: ApijavaService) {
-    this.AJservice.getTest()
-    .subscribe(
-      (data:any) =>{
-        console.log(data);
-      }
-    );
   }
 
   ngOnInit(): void {
@@ -34,5 +32,22 @@ export class HomeComponent implements OnInit {
       return false;
     }
   }
+
+  enviarTXT(form) {
+    this.response = '';
+      if (form) {
+          this.AJservice.postTest(this.textTXT)
+          .subscribe(
+          (data1:any)=>{
+            this.AJservice.getTest()
+            .subscribe(
+              (data2:any) =>{
+                this.response=data2.content;
+              }
+            );
+          }
+          );
+      }
+    }
 
 }
