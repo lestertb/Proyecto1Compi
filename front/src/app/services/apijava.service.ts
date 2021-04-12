@@ -26,6 +26,8 @@ export class ApijavaService {
     return this.http.get(`http://${this.ip}:${this.port}/test2`);
   }
 
-
+  postTest3(textTxt:string) {
+    return this.http.post(`http://${this.ip}:${this.port}/test3`,textTxt);
+  }
 
 }

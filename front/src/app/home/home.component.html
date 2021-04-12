@@ -5,9 +5,12 @@
         <h2>Txt File Emulator</h2>
         <textarea id="file" class="linedTextArea" (keydown)="onKeydownFile($event)" [(ngModel)]="textTXT" name="fileTxt" required>
         </textarea>
-        <button type="submit" name="button"> Run Code</button>
+        <div class="alignButtons">
+          <button type="submit" name="button"> Run Code</button>
+          <button name="button2" (click)="imprimirTokens(textTXT)"> Tokens</button>
+        </div>
         <h2>Output</h2>
-        <textarea id="output" disabled>{{response2}}{{response}}
+        <textarea id="output" disabled>{{response2}}{{response}}{{response3}}
         </textarea>
       </div>
       <div class="rightBlock">

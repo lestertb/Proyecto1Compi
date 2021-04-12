@@ -11,7 +11,7 @@
 #output {
   margin-left: -2.5%;
   background-color: #999999;
-  height: 149px;
+  height: 146px;
   width: 535px;
   color: white;
   resize: none;
@@ -61,4 +61,7 @@ button {
   padding-left: 35px;
   padding-top: 10px;
   border-color:#ccc;
+}
+.alignButtons{
+  display:flex;
 }

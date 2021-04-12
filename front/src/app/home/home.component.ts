@@ -23,6 +23,8 @@ export class HomeComponent implements AfterViewInit {
 
   response2: string;
 
+  response3: string;
+
   constructor(public AJservice: ApijavaService) {
   }
 
@@ -39,9 +41,10 @@ export class HomeComponent implements AfterViewInit {
 
      if (ev.keyCode === 37 || ev.keyCode === 38 || ev.keyCode === 39 || ev.keyCode === 40) {
 
-       console.log("hola");
-
-
+       this.child.underlying.reset();
+       this.textCMD = '';
+       this.child.write('Here starts the terminal \r\n\r\nCreated by: Lester & Marco\r\n');
+       this.child.write('\r\nLM > ');
      }
 
 
@@ -54,6 +57,12 @@ export class HomeComponent implements AfterViewInit {
        }else if (this.textCMD === '') {
          this.child.write('\r\nLM > ');
        }else {
+         this.response = '';
+         this.response2 = '';
+         this.response3 = '';
+         console.log(this.textCMD);
+
+         this.imprimirTokens(this.textCMD);
          this.AJservice.postTest(this.textCMD)
          .subscribe(
          (data1:any)=>{
@@ -84,7 +93,7 @@ export class HomeComponent implements AfterViewInit {
        if (this.child.underlying.buffer.active.cursorX > 5) {
          this.child.write('\b \b');
        }
-     } else if (printable) {
+     } else if (printable && ev.keyCode && ev.keyCode != 37 && ev.keyCode != 38 && ev.keyCode != 39 && ev.keyCode != 40) {
        this.child.write(e.key);
        this.textCMD += e.key;
      }
@@ -108,6 +117,7 @@ export class HomeComponent implements AfterViewInit {
   enviarTXT(form) {
     this.response = '';
     this.response2 = '';
+    this.response3 = '';
       if (form && this.textTXT != '') {
           this.AJservice.postTest(this.textTXT)
           .subscribe(
@@ -130,5 +140,14 @@ export class HomeComponent implements AfterViewInit {
       }else{
         this.response2='Empty';
       }
+    }
+
+    imprimirTokens(text : string){
+      this.AJservice.postTest3(text)
+      .subscribe(
+        (data:any) =>{
+          this.response3 += data.content;
+        }
+      );
     }
 }
