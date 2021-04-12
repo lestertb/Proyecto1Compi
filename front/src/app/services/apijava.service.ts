@@ -34,4 +34,8 @@ export class ApijavaService {
     return this.http.post(`http://${this.ip}:${this.port}/test4`,textTxt);
   }
 
+  getTest5() {
+    return this.http.get(`http://${this.ip}:${this.port}/test5`);
+  }
+
 }

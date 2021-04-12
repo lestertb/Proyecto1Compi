@@ -163,4 +163,16 @@ export class HomeComponent implements AfterViewInit {
         }
       );
     }
+
+    limpiarListBack(){
+      this.AJservice.getTest5()
+      .subscribe(
+        (data:any) =>{
+        }
+      );
+      this.response = '';
+      this.response2 = '';
+      this.response3 = '';
+      this.response4 = '';
+    }
 }

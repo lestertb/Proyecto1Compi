@@ -46,6 +46,11 @@ public class testRoute {
         return new response( "\nElementos actuales creados respectivamente:\n"+"\n"+listInfo.toString());
     }
 
+    @GetMapping("/test5")
+    void greeting4() {
+        LimpiarList();
+    }
+
     @PostMapping("/agregar")
     void agregar (@RequestBody String test){
         miScanner inst = null;
@@ -93,7 +98,7 @@ public class testRoute {
 
 
    void guardarTokens (String test2){
-       listTokens.clear();
+
        miScanner inst2 = null;
        try {
            inst2 = new miScanner(CharStreams.fromString(test2));
@@ -108,7 +113,6 @@ public class testRoute {
     }
 
     void guardarInfo (String test3){
-        listInfo.clear();
 
         miScanner inst3 = null;
         miParser parser3 = null;
@@ -138,5 +142,10 @@ public class testRoute {
         }
 
         catch(Exception e){System.out.println("No hay archivo");e.printStackTrace();}
+    }
+
+    void LimpiarList(){
+        listTokens.clear();
+        listInfo.clear();
     }
 }
