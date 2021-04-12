@@ -58,6 +58,17 @@ export class HomeComponent implements AfterViewInit {
          this.child.write('\r\nLM > ');
        }else if (this.textCMD === '') {
          this.child.write('\r\nLM > ');
+       }else if (this.textCMD === 'if(' ||
+         this.textCMD === 'while(' ||
+         this.textCMD === 'class' ||
+         this.textCMD === 'int' ||
+         this.textCMD === 'string' ||
+         this.textCMD === 'boolean' ||
+         this.textCMD === 'char' ||
+         this.textCMD[this.textCMD.length-1] === '{'
+         ){
+         this.child.write('\r\n...> ');
+          this.textCMD += ' ';
        }else {
          this.response = '';
          this.response2 = '';
