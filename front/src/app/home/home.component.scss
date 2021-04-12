@@ -11,7 +11,7 @@
 #output {
   margin-left: -2.5%;
   background-color: #999999;
-  height: 145px;
+  height: 149px;
   width: 535px;
   color: white;
   resize: none;
@@ -29,6 +29,16 @@
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.leftBlock {
+  float: left;
+}
+
+.rightBlock {
+  float: right;
+  height: 510px;
+  width: 535px;
 }
 
 button {

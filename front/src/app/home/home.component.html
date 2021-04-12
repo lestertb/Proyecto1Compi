@@ -1,19 +1,19 @@
 <div class="container">
   <div>
     <form #form="ngForm" (ngSubmit)="enviarTXT(form)">
-      <div>
+      <div class="leftBlock">
         <h2>Txt File Emulator</h2>
-        <textarea id="file" class="linedTextArea" (keydown)="onKeydown($event)" [(ngModel)]="textTXT" name="fileTxt">
+        <textarea id="file" class="linedTextArea" (keydown)="onKeydownFile($event)" [(ngModel)]="textTXT" name="fileTxt" required>
         </textarea>
         <button type="submit" name="button"> Run Code</button>
         <h2>Output</h2>
         <textarea id="output" disabled>{{response2}}{{response}}
         </textarea>
       </div>
+      <div class="rightBlock">
+        <h2>Terminal Emulator</h2>
+        <ng-terminal #term></ng-terminal>
+      </div>
     </form>
-    <div>
-      <h2>Terminal Emulator</h2>
-      <ng-terminal #term></ng-terminal>
-    </div>
   </div>
 </div>

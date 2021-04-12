@@ -15,7 +15,7 @@ export class HomeComponent implements AfterViewInit {
 
   dataTest = new TestModel();
 
-  textTXT : string;
+  textTXT = '';
 
   textCMD = '';
 
@@ -33,11 +33,25 @@ export class HomeComponent implements AfterViewInit {
 
     this.child.keyEventInput.subscribe(e => {
 
+
      const ev = e.domEvent;
      const printable = !ev.altKey && !ev.ctrlKey && !ev.metaKey;
 
+     if (ev.keyCode === 37 || ev.keyCode === 38 || ev.keyCode === 39 || ev.keyCode === 40) {
+
+       console.log("hola");
+
+
+     }
+
+
      if (ev.keyCode === 13) {
-       if (this.textCMD === '') {
+       if (this.textCMD === 'cls') {
+         this.child.underlying.reset();
+         this.textCMD = '';
+         this.child.write('Here starts the terminal \r\n\r\nCreated by: Lester & Marco\r\n');
+         this.child.write('\r\nLM > ');
+       }else if (this.textCMD === '') {
          this.child.write('\r\nLM > ');
        }else {
          this.AJservice.postTest(this.textCMD)
@@ -78,7 +92,7 @@ export class HomeComponent implements AfterViewInit {
    })
   }
 
-  onKeydown(event) {
+  onKeydownFile(event) {
     if(event.keyCode===9){
       var fileArea = document.getElementById("file") as HTMLInputElement;
       var val = fileArea.value,
@@ -86,14 +100,15 @@ export class HomeComponent implements AfterViewInit {
       end = fileArea.selectionEnd;
       fileArea.value = val.substring(0, start) + ' ' + val.substring(end);
       fileArea.selectionStart = fileArea.selectionEnd = start + 1;
-
       return false;
     }
   }
 
+
   enviarTXT(form) {
     this.response = '';
-      if (form) {
+    this.response2 = '';
+      if (form && this.textTXT != '') {
           this.AJservice.postTest(this.textTXT)
           .subscribe(
           (data1:any)=>{
@@ -112,7 +127,8 @@ export class HomeComponent implements AfterViewInit {
             );
           }
           );
+      }else{
+        this.response2='Empty';
       }
     }
-
 }
