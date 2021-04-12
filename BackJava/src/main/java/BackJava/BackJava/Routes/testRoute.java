@@ -3,6 +3,7 @@ package BackJava.BackJava.Routes;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -22,6 +23,7 @@ public class testRoute {
     private static String res = "";
     private static String res2 = "";
     private List<String> listTokens = new ArrayList<>();
+    private List<String> listInfo = new ArrayList<>();
 
     @GetMapping("/test")
     public response greeting() {
@@ -36,6 +38,12 @@ public class testRoute {
     public response greeting2(@RequestBody String test) {
         guardarTokens(test);
         return new response( "\nTokens utilizados:\n"+"\n"+listTokens.toString());
+    }
+
+    @PostMapping("/test4")
+    public response greeting3(@RequestBody String test) {
+        guardarInfo(test);
+        return new response( "\nElementos actuales creados respectivamente:\n"+"\n"+listInfo.toString());
     }
 
     @PostMapping("/agregar")
@@ -97,5 +105,38 @@ public class testRoute {
            }
        }
        catch(Exception e){System.out.println("No hay archivo");e.printStackTrace();}
+    }
+
+    void guardarInfo (String test3){
+        listInfo.clear();
+
+        miScanner inst3 = null;
+        miParser parser3 = null;
+        ParseTree tree3=null;
+
+        CommonTokenStream tokens3 = null;
+        try {
+            inst3 = new miScanner(CharStreams.fromString(test3));
+            tokens3 = new CommonTokenStream(inst3);
+            parser3 = new miParser(tokens3);
+
+            for (String j :parser3.getRuleNames()
+            ) {
+                listInfo.addAll(Collections.singleton(parser3.variableDeclaration().ID().toString()));
+                //System.out.println(parser.variableDeclaration().ID());
+            }
+            listInfo.removeIf(p -> p.contains("<missing ID>"));
+
+
+            try {
+                tree3 = parser3.program();
+            }
+            catch(RecognitionException e){
+                System.out.println("Error!!!");
+                e.printStackTrace();
+            }
+        }
+
+        catch(Exception e){System.out.println("No hay archivo");e.printStackTrace();}
     }
 }

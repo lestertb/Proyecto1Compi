@@ -25,6 +25,8 @@ export class HomeComponent implements AfterViewInit {
 
   response3: string;
 
+  response4: string;
+
   constructor(public AJservice: ApijavaService) {
   }
 
@@ -60,9 +62,10 @@ export class HomeComponent implements AfterViewInit {
          this.response = '';
          this.response2 = '';
          this.response3 = '';
-         console.log(this.textCMD);
+         this.response4 = '';
 
          this.imprimirTokens(this.textCMD);
+         this.imprimirInfo(this.textCMD);
          this.AJservice.postTest(this.textCMD)
          .subscribe(
          (data1:any)=>{
@@ -118,6 +121,7 @@ export class HomeComponent implements AfterViewInit {
     this.response = '';
     this.response2 = '';
     this.response3 = '';
+    this.response4 = '';
       if (form && this.textTXT != '') {
           this.AJservice.postTest(this.textTXT)
           .subscribe(
@@ -147,6 +151,15 @@ export class HomeComponent implements AfterViewInit {
       .subscribe(
         (data:any) =>{
           this.response3 += data.content;
+        }
+      );
+    }
+
+    imprimirInfo(text : string){
+      this.AJservice.postTest4(text)
+      .subscribe(
+        (data:any) =>{
+          this.response4 += data.content;
         }
       );
     }
