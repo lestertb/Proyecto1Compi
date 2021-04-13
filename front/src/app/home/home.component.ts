@@ -158,21 +158,24 @@ export class HomeComponent implements AfterViewInit {
     }
 
     imprimirTokens(text : string){
-      this.AJservice.postTest3(text)
-      .subscribe(
-        (data:any) =>{
-          this.response3 += data.content;
-        }
-      );
+
+        this.AJservice.postTest3(text)
+        .subscribe(
+          (data:any) =>{
+            this.response3 += data.content;
+          }
+        );
+
+
     }
 
     imprimirInfo(text : string){
-      this.AJservice.postTest4(text)
-      .subscribe(
-        (data:any) =>{
-          this.response4 += data.content;
-        }
-      );
+        this.AJservice.postTest4(text)
+        .subscribe(
+          (data:any) =>{
+            this.response4 += data.content;
+          }
+        );
     }
 
     limpiarListBack(){
