@@ -22,6 +22,4 @@ public class BackJavaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BackJavaApplication.class, args);
 	}
-
-
 }

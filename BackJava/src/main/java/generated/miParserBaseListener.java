@@ -16,361 +16,625 @@ public class miParserBaseListener implements miParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProgram(miParser.ProgramContext ctx) { }
+	@Override public void enterProgramAST(miParser.ProgramASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProgram(miParser.ProgramContext ctx) { }
+	@Override public void exitProgramAST(miParser.ProgramASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterStatement(miParser.StatementContext ctx) { }
+	@Override public void enterVariableDeclarationST(miParser.VariableDeclarationSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitStatement(miParser.StatementContext ctx) { }
+	@Override public void exitVariableDeclarationST(miParser.VariableDeclarationSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlock(miParser.BlockContext ctx) { }
+	@Override public void enterClassDeclarationST(miParser.ClassDeclarationSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitBlock(miParser.BlockContext ctx) { }
+	@Override public void exitClassDeclarationST(miParser.ClassDeclarationSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionDeclaration(miParser.FunctionDeclarationContext ctx) { }
+	@Override public void enterAssignmentST(miParser.AssignmentSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunctionDeclaration(miParser.FunctionDeclarationContext ctx) { }
+	@Override public void exitAssignmentST(miParser.AssignmentSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFormalParams(miParser.FormalParamsContext ctx) { }
+	@Override public void enterArrayAssignmentST(miParser.ArrayAssignmentSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFormalParams(miParser.FormalParamsContext ctx) { }
+	@Override public void exitArrayAssignmentST(miParser.ArrayAssignmentSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFormalParam(miParser.FormalParamContext ctx) { }
+	@Override public void enterPrintStatementST(miParser.PrintStatementSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFormalParam(miParser.FormalParamContext ctx) { }
+	@Override public void exitPrintStatementST(miParser.PrintStatementSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhileStatement(miParser.WhileStatementContext ctx) { }
+	@Override public void enterIfStatementST(miParser.IfStatementSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhileStatement(miParser.WhileStatementContext ctx) { }
+	@Override public void exitIfStatementST(miParser.IfStatementSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterIfStatement(miParser.IfStatementContext ctx) { }
+	@Override public void enterWhileStatementST(miParser.WhileStatementSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitIfStatement(miParser.IfStatementContext ctx) { }
+	@Override public void exitWhileStatementST(miParser.WhileStatementSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReturnStatement(miParser.ReturnStatementContext ctx) { }
+	@Override public void enterReturnStatementST(miParser.ReturnStatementSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReturnStatement(miParser.ReturnStatementContext ctx) { }
+	@Override public void exitReturnStatementST(miParser.ReturnStatementSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterPrintStatement(miParser.PrintStatementContext ctx) { }
+	@Override public void enterFunctionDeclarationST(miParser.FunctionDeclarationSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitPrintStatement(miParser.PrintStatementContext ctx) { }
+	@Override public void exitFunctionDeclarationST(miParser.FunctionDeclarationSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassDeclaration(miParser.ClassDeclarationContext ctx) { }
+	@Override public void enterBlockST(miParser.BlockSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClassDeclaration(miParser.ClassDeclarationContext ctx) { }
+	@Override public void exitBlockST(miParser.BlockSTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterClassVariableDeclaration(miParser.ClassVariableDeclarationContext ctx) { }
+	@Override public void enterBlockAST(miParser.BlockASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitClassVariableDeclaration(miParser.ClassVariableDeclarationContext ctx) { }
+	@Override public void exitBlockAST(miParser.BlockASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVariableDeclaration(miParser.VariableDeclarationContext ctx) { }
+	@Override public void enterFunctionDeclarationAST(miParser.FunctionDeclarationASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVariableDeclaration(miParser.VariableDeclarationContext ctx) { }
+	@Override public void exitFunctionDeclarationAST(miParser.FunctionDeclarationASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterType(miParser.TypeContext ctx) { }
+	@Override public void enterFormalParamsAST(miParser.FormalParamsASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitType(miParser.TypeContext ctx) { }
+	@Override public void exitFormalParamsAST(miParser.FormalParamsASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSimpleType(miParser.SimpleTypeContext ctx) { }
+	@Override public void enterFormalParamAST(miParser.FormalParamASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSimpleType(miParser.SimpleTypeContext ctx) { }
+	@Override public void exitFormalParamAST(miParser.FormalParamASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayType(miParser.ArrayTypeContext ctx) { }
+	@Override public void enterWhileStatementAST(miParser.WhileStatementASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayType(miParser.ArrayTypeContext ctx) { }
+	@Override public void exitWhileStatementAST(miParser.WhileStatementASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAssignment(miParser.AssignmentContext ctx) { }
+	@Override public void enterIfStatementAST(miParser.IfStatementASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAssignment(miParser.AssignmentContext ctx) { }
+	@Override public void exitIfStatementAST(miParser.IfStatementASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayAssignment(miParser.ArrayAssignmentContext ctx) { }
+	@Override public void enterReturnStatementAST(miParser.ReturnStatementASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayAssignment(miParser.ArrayAssignmentContext ctx) { }
+	@Override public void exitReturnStatementAST(miParser.ReturnStatementASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(miParser.ExpressionContext ctx) { }
+	@Override public void enterPrintStatementAST(miParser.PrintStatementASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(miParser.ExpressionContext ctx) { }
+	@Override public void exitPrintStatementAST(miParser.PrintStatementASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSimpleExpression(miParser.SimpleExpressionContext ctx) { }
+	@Override public void enterClassDeclarationAST(miParser.ClassDeclarationASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSimpleExpression(miParser.SimpleExpressionContext ctx) { }
+	@Override public void exitClassDeclarationAST(miParser.ClassDeclarationASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTerm(miParser.TermContext ctx) { }
+	@Override public void enterClassVariableDeclarationAST(miParser.ClassVariableDeclarationASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTerm(miParser.TermContext ctx) { }
+	@Override public void exitClassVariableDeclarationAST(miParser.ClassVariableDeclarationASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFactor(miParser.FactorContext ctx) { }
+	@Override public void enterVariableDeclarationAST(miParser.VariableDeclarationASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFactor(miParser.FactorContext ctx) { }
+	@Override public void exitVariableDeclarationAST(miParser.VariableDeclarationASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterUnary(miParser.UnaryContext ctx) { }
+	@Override public void enterSimpleTypeTAST(miParser.SimpleTypeTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitUnary(miParser.UnaryContext ctx) { }
+	@Override public void exitSimpleTypeTAST(miParser.SimpleTypeTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAllocationExpression(miParser.AllocationExpressionContext ctx) { }
+	@Override public void enterArrayTypeTAST(miParser.ArrayTypeTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitAllocationExpression(miParser.AllocationExpressionContext ctx) { }
+	@Override public void exitArrayTypeTAST(miParser.ArrayTypeTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayAllocationExpression(miParser.ArrayAllocationExpressionContext ctx) { }
+	@Override public void enterIdTAST(miParser.IdTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayAllocationExpression(miParser.ArrayAllocationExpressionContext ctx) { }
+	@Override public void exitIdTAST(miParser.IdTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSubExpression(miParser.SubExpressionContext ctx) { }
+	@Override public void enterBooleanSTAST(miParser.BooleanSTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitSubExpression(miParser.SubExpressionContext ctx) { }
+	@Override public void exitBooleanSTAST(miParser.BooleanSTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionCall(miParser.FunctionCallContext ctx) { }
+	@Override public void enterCharSTAST(miParser.CharSTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitFunctionCall(miParser.FunctionCallContext ctx) { }
+	@Override public void exitCharSTAST(miParser.CharSTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterActualParams(miParser.ActualParamsContext ctx) { }
+	@Override public void enterIntSTAST(miParser.IntSTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitActualParams(miParser.ActualParamsContext ctx) { }
+	@Override public void exitIntSTAST(miParser.IntSTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayLookup(miParser.ArrayLookupContext ctx) { }
+	@Override public void enterStringSTAST(miParser.StringSTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayLookup(miParser.ArrayLookupContext ctx) { }
+	@Override public void exitStringSTAST(miParser.StringSTASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterArrayLength(miParser.ArrayLengthContext ctx) { }
+	@Override public void enterArrayTypeAST(miParser.ArrayTypeASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitArrayLength(miParser.ArrayLengthContext ctx) { }
+	@Override public void exitArrayTypeAST(miParser.ArrayTypeASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssignmentAST(miParser.AssignmentASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssignmentAST(miParser.AssignmentASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArrayAssignmentAST(miParser.ArrayAssignmentASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArrayAssignmentAST(miParser.ArrayAssignmentASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExpressionAST(miParser.ExpressionASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExpressionAST(miParser.ExpressionASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSimpleExpressionAST(miParser.SimpleExpressionASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSimpleExpressionAST(miParser.SimpleExpressionASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTermAST(miParser.TermASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTermAST(miParser.TermASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLiteralFAST(miParser.LiteralFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLiteralFAST(miParser.LiteralFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterIdFAST(miParser.IdFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitIdFAST(miParser.IdFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunctionCallFAST(miParser.FunctionCallFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunctionCallFAST(miParser.FunctionCallFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArrayLookupFAST(miParser.ArrayLookupFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArrayLookupFAST(miParser.ArrayLookupFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArrayLengthFAST(miParser.ArrayLengthFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArrayLengthFAST(miParser.ArrayLengthFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSubExpressionFAST(miParser.SubExpressionFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSubExpressionFAST(miParser.SubExpressionFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArrayAllocationExpressionFAST(miParser.ArrayAllocationExpressionFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArrayAllocationExpressionFAST(miParser.ArrayAllocationExpressionFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAllocationExpressionFAST(miParser.AllocationExpressionFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAllocationExpressionFAST(miParser.AllocationExpressionFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterUnaryFAST(miParser.UnaryFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUnaryFAST(miParser.UnaryFASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterUnaryAST(miParser.UnaryASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUnaryAST(miParser.UnaryASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAllocationExpressionAST(miParser.AllocationExpressionASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAllocationExpressionAST(miParser.AllocationExpressionASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArrayAllocationExpressionAST(miParser.ArrayAllocationExpressionASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArrayAllocationExpressionAST(miParser.ArrayAllocationExpressionASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterSubExpressionAST(miParser.SubExpressionASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSubExpressionAST(miParser.SubExpressionASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunctionCallAST(miParser.FunctionCallASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunctionCallAST(miParser.FunctionCallASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterActualParamsAST(miParser.ActualParamsASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitActualParamsAST(miParser.ActualParamsASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArrayLookupAST(miParser.ArrayLookupASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArrayLookupAST(miParser.ArrayLookupASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterArrayLengthAST(miParser.ArrayLengthASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArrayLengthAST(miParser.ArrayLengthASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -388,13 +652,49 @@ public class miParserBaseListener implements miParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLiteral(miParser.LiteralContext ctx) { }
+	@Override public void enterIntLAST(miParser.IntLASTContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLiteral(miParser.LiteralContext ctx) { }
+	@Override public void exitIntLAST(miParser.IntLASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterRealLAST(miParser.RealLASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRealLAST(miParser.RealLASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBoolLAST(miParser.BoolLASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBoolLAST(miParser.BoolLASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterStringLAST(miParser.StringLASTContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStringLAST(miParser.StringLASTContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

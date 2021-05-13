@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+import BackJava.BackJava.AC.MiVisitor;
 import BackJava.BackJava.Classes.MyErrorListener;
 import BackJava.BackJava.Classes.response;
 import generated.miParser;
@@ -53,6 +54,7 @@ public class testRoute {
 
     @PostMapping("/agregar")
     void agregar (@RequestBody String test){
+        String errorVisit =  "";
         miScanner inst = null;
         miParser parser = null;
         ParseTree tree=null;
@@ -74,6 +76,9 @@ public class testRoute {
 
             try {
                 tree = parser.program();
+                MiVisitor mv = new MiVisitor();
+                mv.visit(tree);
+                errorVisit += mv.errores;
             }
             catch(RecognitionException e){
                 System.out.println("Error!!!");
@@ -86,9 +91,12 @@ public class testRoute {
                 //treeGUI.get().setVisible(true);
 
                 res = errorListener.toString();
+
+                res += errorVisit;
             }
             else {
                 res2 = "Compilacion fallida\n";
+
                 res = errorListener.toString();
             }
         }
@@ -126,7 +134,7 @@ public class testRoute {
 
             for (String j :parser3.getRuleNames()
             ) {
-                listInfo.addAll(Collections.singleton(parser3.variableDeclaration().ID().toString()));
+                listInfo.addAll(Collections.singleton(parser3.variableDeclaration().getText()));
                 //System.out.println(parser.variableDeclaration().ID());
             }
             listInfo.removeIf(p -> p.contains("<missing ID>"));

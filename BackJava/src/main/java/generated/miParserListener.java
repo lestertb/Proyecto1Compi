@@ -8,305 +8,629 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface miParserListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link miParser#program}.
+	 * Enter a parse tree produced by the {@code programAST}
+	 * labeled alternative in {@link miParser#program}.
 	 * @param ctx the parse tree
 	 */
-	void enterProgram(miParser.ProgramContext ctx);
+	void enterProgramAST(miParser.ProgramASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#program}.
+	 * Exit a parse tree produced by the {@code programAST}
+	 * labeled alternative in {@link miParser#program}.
 	 * @param ctx the parse tree
 	 */
-	void exitProgram(miParser.ProgramContext ctx);
+	void exitProgramAST(miParser.ProgramASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#statement}.
+	 * Enter a parse tree produced by the {@code variableDeclarationST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterStatement(miParser.StatementContext ctx);
+	void enterVariableDeclarationST(miParser.VariableDeclarationSTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#statement}.
+	 * Exit a parse tree produced by the {@code variableDeclarationST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitStatement(miParser.StatementContext ctx);
+	void exitVariableDeclarationST(miParser.VariableDeclarationSTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#block}.
+	 * Enter a parse tree produced by the {@code classDeclarationST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterBlock(miParser.BlockContext ctx);
+	void enterClassDeclarationST(miParser.ClassDeclarationSTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#block}.
+	 * Exit a parse tree produced by the {@code classDeclarationST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitBlock(miParser.BlockContext ctx);
+	void exitClassDeclarationST(miParser.ClassDeclarationSTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#functionDeclaration}.
+	 * Enter a parse tree produced by the {@code assignmentST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionDeclaration(miParser.FunctionDeclarationContext ctx);
+	void enterAssignmentST(miParser.AssignmentSTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#functionDeclaration}.
+	 * Exit a parse tree produced by the {@code assignmentST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionDeclaration(miParser.FunctionDeclarationContext ctx);
+	void exitAssignmentST(miParser.AssignmentSTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#formalParams}.
+	 * Enter a parse tree produced by the {@code arrayAssignmentST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterFormalParams(miParser.FormalParamsContext ctx);
+	void enterArrayAssignmentST(miParser.ArrayAssignmentSTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#formalParams}.
+	 * Exit a parse tree produced by the {@code arrayAssignmentST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitFormalParams(miParser.FormalParamsContext ctx);
+	void exitArrayAssignmentST(miParser.ArrayAssignmentSTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#formalParam}.
+	 * Enter a parse tree produced by the {@code printStatementST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterFormalParam(miParser.FormalParamContext ctx);
+	void enterPrintStatementST(miParser.PrintStatementSTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#formalParam}.
+	 * Exit a parse tree produced by the {@code printStatementST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitFormalParam(miParser.FormalParamContext ctx);
+	void exitPrintStatementST(miParser.PrintStatementSTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#whileStatement}.
+	 * Enter a parse tree produced by the {@code ifStatementST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterWhileStatement(miParser.WhileStatementContext ctx);
+	void enterIfStatementST(miParser.IfStatementSTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#whileStatement}.
+	 * Exit a parse tree produced by the {@code ifStatementST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitWhileStatement(miParser.WhileStatementContext ctx);
+	void exitIfStatementST(miParser.IfStatementSTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#ifStatement}.
+	 * Enter a parse tree produced by the {@code whileStatementST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterIfStatement(miParser.IfStatementContext ctx);
+	void enterWhileStatementST(miParser.WhileStatementSTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#ifStatement}.
+	 * Exit a parse tree produced by the {@code whileStatementST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitIfStatement(miParser.IfStatementContext ctx);
+	void exitWhileStatementST(miParser.WhileStatementSTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#returnStatement}.
+	 * Enter a parse tree produced by the {@code returnStatementST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterReturnStatement(miParser.ReturnStatementContext ctx);
+	void enterReturnStatementST(miParser.ReturnStatementSTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#returnStatement}.
+	 * Exit a parse tree produced by the {@code returnStatementST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitReturnStatement(miParser.ReturnStatementContext ctx);
+	void exitReturnStatementST(miParser.ReturnStatementSTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#printStatement}.
+	 * Enter a parse tree produced by the {@code functionDeclarationST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterPrintStatement(miParser.PrintStatementContext ctx);
+	void enterFunctionDeclarationST(miParser.FunctionDeclarationSTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#printStatement}.
+	 * Exit a parse tree produced by the {@code functionDeclarationST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitPrintStatement(miParser.PrintStatementContext ctx);
+	void exitFunctionDeclarationST(miParser.FunctionDeclarationSTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#classDeclaration}.
+	 * Enter a parse tree produced by the {@code blockST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void enterClassDeclaration(miParser.ClassDeclarationContext ctx);
+	void enterBlockST(miParser.BlockSTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#classDeclaration}.
+	 * Exit a parse tree produced by the {@code blockST}
+	 * labeled alternative in {@link miParser#statement}.
 	 * @param ctx the parse tree
 	 */
-	void exitClassDeclaration(miParser.ClassDeclarationContext ctx);
+	void exitBlockST(miParser.BlockSTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#classVariableDeclaration}.
+	 * Enter a parse tree produced by the {@code blockAST}
+	 * labeled alternative in {@link miParser#block}.
 	 * @param ctx the parse tree
 	 */
-	void enterClassVariableDeclaration(miParser.ClassVariableDeclarationContext ctx);
+	void enterBlockAST(miParser.BlockASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#classVariableDeclaration}.
+	 * Exit a parse tree produced by the {@code blockAST}
+	 * labeled alternative in {@link miParser#block}.
 	 * @param ctx the parse tree
 	 */
-	void exitClassVariableDeclaration(miParser.ClassVariableDeclarationContext ctx);
+	void exitBlockAST(miParser.BlockASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#variableDeclaration}.
+	 * Enter a parse tree produced by the {@code functionDeclarationAST}
+	 * labeled alternative in {@link miParser#functionDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterVariableDeclaration(miParser.VariableDeclarationContext ctx);
+	void enterFunctionDeclarationAST(miParser.FunctionDeclarationASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#variableDeclaration}.
+	 * Exit a parse tree produced by the {@code functionDeclarationAST}
+	 * labeled alternative in {@link miParser#functionDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitVariableDeclaration(miParser.VariableDeclarationContext ctx);
+	void exitFunctionDeclarationAST(miParser.FunctionDeclarationASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#type}.
+	 * Enter a parse tree produced by the {@code formalParamsAST}
+	 * labeled alternative in {@link miParser#formalParams}.
 	 * @param ctx the parse tree
 	 */
-	void enterType(miParser.TypeContext ctx);
+	void enterFormalParamsAST(miParser.FormalParamsASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#type}.
+	 * Exit a parse tree produced by the {@code formalParamsAST}
+	 * labeled alternative in {@link miParser#formalParams}.
 	 * @param ctx the parse tree
 	 */
-	void exitType(miParser.TypeContext ctx);
+	void exitFormalParamsAST(miParser.FormalParamsASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#simpleType}.
+	 * Enter a parse tree produced by the {@code formalParamAST}
+	 * labeled alternative in {@link miParser#formalParam}.
 	 * @param ctx the parse tree
 	 */
-	void enterSimpleType(miParser.SimpleTypeContext ctx);
+	void enterFormalParamAST(miParser.FormalParamASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#simpleType}.
+	 * Exit a parse tree produced by the {@code formalParamAST}
+	 * labeled alternative in {@link miParser#formalParam}.
 	 * @param ctx the parse tree
 	 */
-	void exitSimpleType(miParser.SimpleTypeContext ctx);
+	void exitFormalParamAST(miParser.FormalParamASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#arrayType}.
+	 * Enter a parse tree produced by the {@code whileStatementAST}
+	 * labeled alternative in {@link miParser#whileStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterArrayType(miParser.ArrayTypeContext ctx);
+	void enterWhileStatementAST(miParser.WhileStatementASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#arrayType}.
+	 * Exit a parse tree produced by the {@code whileStatementAST}
+	 * labeled alternative in {@link miParser#whileStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitArrayType(miParser.ArrayTypeContext ctx);
+	void exitWhileStatementAST(miParser.WhileStatementASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#assignment}.
+	 * Enter a parse tree produced by the {@code ifStatementAST}
+	 * labeled alternative in {@link miParser#ifStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterAssignment(miParser.AssignmentContext ctx);
+	void enterIfStatementAST(miParser.IfStatementASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#assignment}.
+	 * Exit a parse tree produced by the {@code ifStatementAST}
+	 * labeled alternative in {@link miParser#ifStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitAssignment(miParser.AssignmentContext ctx);
+	void exitIfStatementAST(miParser.IfStatementASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#arrayAssignment}.
+	 * Enter a parse tree produced by the {@code returnStatementAST}
+	 * labeled alternative in {@link miParser#returnStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterArrayAssignment(miParser.ArrayAssignmentContext ctx);
+	void enterReturnStatementAST(miParser.ReturnStatementASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#arrayAssignment}.
+	 * Exit a parse tree produced by the {@code returnStatementAST}
+	 * labeled alternative in {@link miParser#returnStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitArrayAssignment(miParser.ArrayAssignmentContext ctx);
+	void exitReturnStatementAST(miParser.ReturnStatementASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#expression}.
+	 * Enter a parse tree produced by the {@code printStatementAST}
+	 * labeled alternative in {@link miParser#printStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(miParser.ExpressionContext ctx);
+	void enterPrintStatementAST(miParser.PrintStatementASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#expression}.
+	 * Exit a parse tree produced by the {@code printStatementAST}
+	 * labeled alternative in {@link miParser#printStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(miParser.ExpressionContext ctx);
+	void exitPrintStatementAST(miParser.PrintStatementASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#simpleExpression}.
+	 * Enter a parse tree produced by the {@code classDeclarationAST}
+	 * labeled alternative in {@link miParser#classDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterSimpleExpression(miParser.SimpleExpressionContext ctx);
+	void enterClassDeclarationAST(miParser.ClassDeclarationASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#simpleExpression}.
+	 * Exit a parse tree produced by the {@code classDeclarationAST}
+	 * labeled alternative in {@link miParser#classDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitSimpleExpression(miParser.SimpleExpressionContext ctx);
+	void exitClassDeclarationAST(miParser.ClassDeclarationASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#term}.
+	 * Enter a parse tree produced by the {@code classVariableDeclarationAST}
+	 * labeled alternative in {@link miParser#classVariableDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterTerm(miParser.TermContext ctx);
+	void enterClassVariableDeclarationAST(miParser.ClassVariableDeclarationASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#term}.
+	 * Exit a parse tree produced by the {@code classVariableDeclarationAST}
+	 * labeled alternative in {@link miParser#classVariableDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitTerm(miParser.TermContext ctx);
+	void exitClassVariableDeclarationAST(miParser.ClassVariableDeclarationASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#factor}.
+	 * Enter a parse tree produced by the {@code variableDeclarationAST}
+	 * labeled alternative in {@link miParser#variableDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterFactor(miParser.FactorContext ctx);
+	void enterVariableDeclarationAST(miParser.VariableDeclarationASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#factor}.
+	 * Exit a parse tree produced by the {@code variableDeclarationAST}
+	 * labeled alternative in {@link miParser#variableDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitFactor(miParser.FactorContext ctx);
+	void exitVariableDeclarationAST(miParser.VariableDeclarationASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#unary}.
+	 * Enter a parse tree produced by the {@code simpleTypeTAST}
+	 * labeled alternative in {@link miParser#type}.
 	 * @param ctx the parse tree
 	 */
-	void enterUnary(miParser.UnaryContext ctx);
+	void enterSimpleTypeTAST(miParser.SimpleTypeTASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#unary}.
+	 * Exit a parse tree produced by the {@code simpleTypeTAST}
+	 * labeled alternative in {@link miParser#type}.
 	 * @param ctx the parse tree
 	 */
-	void exitUnary(miParser.UnaryContext ctx);
+	void exitSimpleTypeTAST(miParser.SimpleTypeTASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#allocationExpression}.
+	 * Enter a parse tree produced by the {@code arrayTypeTAST}
+	 * labeled alternative in {@link miParser#type}.
 	 * @param ctx the parse tree
 	 */
-	void enterAllocationExpression(miParser.AllocationExpressionContext ctx);
+	void enterArrayTypeTAST(miParser.ArrayTypeTASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#allocationExpression}.
+	 * Exit a parse tree produced by the {@code arrayTypeTAST}
+	 * labeled alternative in {@link miParser#type}.
 	 * @param ctx the parse tree
 	 */
-	void exitAllocationExpression(miParser.AllocationExpressionContext ctx);
+	void exitArrayTypeTAST(miParser.ArrayTypeTASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#arrayAllocationExpression}.
+	 * Enter a parse tree produced by the {@code idTAST}
+	 * labeled alternative in {@link miParser#type}.
 	 * @param ctx the parse tree
 	 */
-	void enterArrayAllocationExpression(miParser.ArrayAllocationExpressionContext ctx);
+	void enterIdTAST(miParser.IdTASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#arrayAllocationExpression}.
+	 * Exit a parse tree produced by the {@code idTAST}
+	 * labeled alternative in {@link miParser#type}.
 	 * @param ctx the parse tree
 	 */
-	void exitArrayAllocationExpression(miParser.ArrayAllocationExpressionContext ctx);
+	void exitIdTAST(miParser.IdTASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#subExpression}.
+	 * Enter a parse tree produced by the {@code booleanSTAST}
+	 * labeled alternative in {@link miParser#simpleType}.
 	 * @param ctx the parse tree
 	 */
-	void enterSubExpression(miParser.SubExpressionContext ctx);
+	void enterBooleanSTAST(miParser.BooleanSTASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#subExpression}.
+	 * Exit a parse tree produced by the {@code booleanSTAST}
+	 * labeled alternative in {@link miParser#simpleType}.
 	 * @param ctx the parse tree
 	 */
-	void exitSubExpression(miParser.SubExpressionContext ctx);
+	void exitBooleanSTAST(miParser.BooleanSTASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#functionCall}.
+	 * Enter a parse tree produced by the {@code charSTAST}
+	 * labeled alternative in {@link miParser#simpleType}.
 	 * @param ctx the parse tree
 	 */
-	void enterFunctionCall(miParser.FunctionCallContext ctx);
+	void enterCharSTAST(miParser.CharSTASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#functionCall}.
+	 * Exit a parse tree produced by the {@code charSTAST}
+	 * labeled alternative in {@link miParser#simpleType}.
 	 * @param ctx the parse tree
 	 */
-	void exitFunctionCall(miParser.FunctionCallContext ctx);
+	void exitCharSTAST(miParser.CharSTASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#actualParams}.
+	 * Enter a parse tree produced by the {@code intSTAST}
+	 * labeled alternative in {@link miParser#simpleType}.
 	 * @param ctx the parse tree
 	 */
-	void enterActualParams(miParser.ActualParamsContext ctx);
+	void enterIntSTAST(miParser.IntSTASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#actualParams}.
+	 * Exit a parse tree produced by the {@code intSTAST}
+	 * labeled alternative in {@link miParser#simpleType}.
 	 * @param ctx the parse tree
 	 */
-	void exitActualParams(miParser.ActualParamsContext ctx);
+	void exitIntSTAST(miParser.IntSTASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#arrayLookup}.
+	 * Enter a parse tree produced by the {@code stringSTAST}
+	 * labeled alternative in {@link miParser#simpleType}.
 	 * @param ctx the parse tree
 	 */
-	void enterArrayLookup(miParser.ArrayLookupContext ctx);
+	void enterStringSTAST(miParser.StringSTASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#arrayLookup}.
+	 * Exit a parse tree produced by the {@code stringSTAST}
+	 * labeled alternative in {@link miParser#simpleType}.
 	 * @param ctx the parse tree
 	 */
-	void exitArrayLookup(miParser.ArrayLookupContext ctx);
+	void exitStringSTAST(miParser.StringSTASTContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#arrayLength}.
+	 * Enter a parse tree produced by the {@code arrayTypeAST}
+	 * labeled alternative in {@link miParser#arrayType}.
 	 * @param ctx the parse tree
 	 */
-	void enterArrayLength(miParser.ArrayLengthContext ctx);
+	void enterArrayTypeAST(miParser.ArrayTypeASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#arrayLength}.
+	 * Exit a parse tree produced by the {@code arrayTypeAST}
+	 * labeled alternative in {@link miParser#arrayType}.
 	 * @param ctx the parse tree
 	 */
-	void exitArrayLength(miParser.ArrayLengthContext ctx);
+	void exitArrayTypeAST(miParser.ArrayTypeASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code assignmentAST}
+	 * labeled alternative in {@link miParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignmentAST(miParser.AssignmentASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code assignmentAST}
+	 * labeled alternative in {@link miParser#assignment}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignmentAST(miParser.AssignmentASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code arrayAssignmentAST}
+	 * labeled alternative in {@link miParser#arrayAssignment}.
+	 * @param ctx the parse tree
+	 */
+	void enterArrayAssignmentAST(miParser.ArrayAssignmentASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code arrayAssignmentAST}
+	 * labeled alternative in {@link miParser#arrayAssignment}.
+	 * @param ctx the parse tree
+	 */
+	void exitArrayAssignmentAST(miParser.ArrayAssignmentASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code expressionAST}
+	 * labeled alternative in {@link miParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressionAST(miParser.ExpressionASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code expressionAST}
+	 * labeled alternative in {@link miParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressionAST(miParser.ExpressionASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code simpleExpressionAST}
+	 * labeled alternative in {@link miParser#simpleExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterSimpleExpressionAST(miParser.SimpleExpressionASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code simpleExpressionAST}
+	 * labeled alternative in {@link miParser#simpleExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitSimpleExpressionAST(miParser.SimpleExpressionASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code termAST}
+	 * labeled alternative in {@link miParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void enterTermAST(miParser.TermASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code termAST}
+	 * labeled alternative in {@link miParser#term}.
+	 * @param ctx the parse tree
+	 */
+	void exitTermAST(miParser.TermASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code literalFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterLiteralFAST(miParser.LiteralFASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code literalFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitLiteralFAST(miParser.LiteralFASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code idFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterIdFAST(miParser.IdFASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code idFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitIdFAST(miParser.IdFASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code functionCallFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunctionCallFAST(miParser.FunctionCallFASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code functionCallFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunctionCallFAST(miParser.FunctionCallFASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code arrayLookupFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterArrayLookupFAST(miParser.ArrayLookupFASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code arrayLookupFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitArrayLookupFAST(miParser.ArrayLookupFASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code arrayLengthFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterArrayLengthFAST(miParser.ArrayLengthFASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code arrayLengthFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitArrayLengthFAST(miParser.ArrayLengthFASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code subExpressionFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterSubExpressionFAST(miParser.SubExpressionFASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code subExpressionFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitSubExpressionFAST(miParser.SubExpressionFASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code arrayAllocationExpressionFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterArrayAllocationExpressionFAST(miParser.ArrayAllocationExpressionFASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code arrayAllocationExpressionFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitArrayAllocationExpressionFAST(miParser.ArrayAllocationExpressionFASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code allocationExpressionFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterAllocationExpressionFAST(miParser.AllocationExpressionFASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code allocationExpressionFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitAllocationExpressionFAST(miParser.AllocationExpressionFASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code unaryFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnaryFAST(miParser.UnaryFASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code unaryFAST}
+	 * labeled alternative in {@link miParser#factor}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnaryFAST(miParser.UnaryFASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code unaryAST}
+	 * labeled alternative in {@link miParser#unary}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnaryAST(miParser.UnaryASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code unaryAST}
+	 * labeled alternative in {@link miParser#unary}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnaryAST(miParser.UnaryASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code allocationExpressionAST}
+	 * labeled alternative in {@link miParser#allocationExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterAllocationExpressionAST(miParser.AllocationExpressionASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code allocationExpressionAST}
+	 * labeled alternative in {@link miParser#allocationExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitAllocationExpressionAST(miParser.AllocationExpressionASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code arrayAllocationExpressionAST}
+	 * labeled alternative in {@link miParser#arrayAllocationExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterArrayAllocationExpressionAST(miParser.ArrayAllocationExpressionASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code arrayAllocationExpressionAST}
+	 * labeled alternative in {@link miParser#arrayAllocationExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitArrayAllocationExpressionAST(miParser.ArrayAllocationExpressionASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code subExpressionAST}
+	 * labeled alternative in {@link miParser#subExpression}.
+	 * @param ctx the parse tree
+	 */
+	void enterSubExpressionAST(miParser.SubExpressionASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code subExpressionAST}
+	 * labeled alternative in {@link miParser#subExpression}.
+	 * @param ctx the parse tree
+	 */
+	void exitSubExpressionAST(miParser.SubExpressionASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code functionCallAST}
+	 * labeled alternative in {@link miParser#functionCall}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunctionCallAST(miParser.FunctionCallASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code functionCallAST}
+	 * labeled alternative in {@link miParser#functionCall}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunctionCallAST(miParser.FunctionCallASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code actualParamsAST}
+	 * labeled alternative in {@link miParser#actualParams}.
+	 * @param ctx the parse tree
+	 */
+	void enterActualParamsAST(miParser.ActualParamsASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code actualParamsAST}
+	 * labeled alternative in {@link miParser#actualParams}.
+	 * @param ctx the parse tree
+	 */
+	void exitActualParamsAST(miParser.ActualParamsASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code arrayLookupAST}
+	 * labeled alternative in {@link miParser#arrayLookup}.
+	 * @param ctx the parse tree
+	 */
+	void enterArrayLookupAST(miParser.ArrayLookupASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code arrayLookupAST}
+	 * labeled alternative in {@link miParser#arrayLookup}.
+	 * @param ctx the parse tree
+	 */
+	void exitArrayLookupAST(miParser.ArrayLookupASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code arrayLengthAST}
+	 * labeled alternative in {@link miParser#arrayLength}.
+	 * @param ctx the parse tree
+	 */
+	void enterArrayLengthAST(miParser.ArrayLengthASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code arrayLengthAST}
+	 * labeled alternative in {@link miParser#arrayLength}.
+	 * @param ctx the parse tree
+	 */
+	void exitArrayLengthAST(miParser.ArrayLengthASTContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link miParser#boolLiteral}.
 	 * @param ctx the parse tree
@@ -318,13 +642,51 @@ public interface miParserListener extends ParseTreeListener {
 	 */
 	void exitBoolLiteral(miParser.BoolLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link miParser#literal}.
+	 * Enter a parse tree produced by the {@code intLAST}
+	 * labeled alternative in {@link miParser#literal}.
 	 * @param ctx the parse tree
 	 */
-	void enterLiteral(miParser.LiteralContext ctx);
+	void enterIntLAST(miParser.IntLASTContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link miParser#literal}.
+	 * Exit a parse tree produced by the {@code intLAST}
+	 * labeled alternative in {@link miParser#literal}.
 	 * @param ctx the parse tree
 	 */
-	void exitLiteral(miParser.LiteralContext ctx);
+	void exitIntLAST(miParser.IntLASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code realLAST}
+	 * labeled alternative in {@link miParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void enterRealLAST(miParser.RealLASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code realLAST}
+	 * labeled alternative in {@link miParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void exitRealLAST(miParser.RealLASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code boolLAST}
+	 * labeled alternative in {@link miParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void enterBoolLAST(miParser.BoolLASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code boolLAST}
+	 * labeled alternative in {@link miParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void exitBoolLAST(miParser.BoolLASTContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code stringLAST}
+	 * labeled alternative in {@link miParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void enterStringLAST(miParser.StringLASTContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code stringLAST}
+	 * labeled alternative in {@link miParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void exitStringLAST(miParser.StringLASTContext ctx);
 }
