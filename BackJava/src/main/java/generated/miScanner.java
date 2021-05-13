@@ -1,4 +1,4 @@
-// Generated from C:/Users/marco/OneDrive/Escritorio/New folder (3)/proyecto1compi/BackJava/src/main/java\miScanner.g4 by ANTLR 4.9.1
+// Generated from C:/Users/Lester Trejos/Documents/Compi/RepoProyecto1/proyecto1compi/BackJava/src/main/java\miScanner.g4 by ANTLR 4.9.1
 package generated;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
@@ -51,7 +51,7 @@ public class miScanner extends Lexer {
 			"')'", "'{'", "'}'", "'['", "']'", null, null, null, "'boolean'", "'char'", 
 			"'int'", "'string'", "'true'", "'false'", "'+'", "'-'", "'or'", "'*'", 
 			"'/'", "'and'", "'!'", null, "'if'", "'else'", "'while'", "'return'", 
-			"'class'", "'print'", "'new'", "'lenght'"
+			"'class'", "'print'", "'new'", "'length'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -213,8 +213,8 @@ public class miScanner extends Lexer {
 		"\2\2\u00ff\u0100\7r\2\2\u0100\u0101\7t\2\2\u0101\u0102\7k\2\2\u0102\u0103"+
 		"\7p\2\2\u0103\u0104\7v\2\2\u0104X\3\2\2\2\u0105\u0106\7p\2\2\u0106\u0107"+
 		"\7g\2\2\u0107\u0108\7y\2\2\u0108Z\3\2\2\2\u0109\u010a\7n\2\2\u010a\u010b"+
-		"\7g\2\2\u010b\u010c\7p\2\2\u010c\u010d\7i\2\2\u010d\u010e\7j\2\2\u010e"+
-		"\u010f\7v\2\2\u010f\\\3\2\2\2\u0110\u011b\5\7\4\2\u0111\u0117\5g\64\2"+
+		"\7g\2\2\u010b\u010c\7p\2\2\u010c\u010d\7i\2\2\u010d\u010e\7v\2\2\u010e"+
+		"\u010f\7j\2\2\u010f\\\3\2\2\2\u0110\u011b\5\7\4\2\u0111\u0117\5g\64\2"+
 		"\u0112\u0116\5\7\4\2\u0113\u0116\5g\64\2\u0114\u0116\5e\63\2\u0115\u0112"+
 		"\3\2\2\2\u0115\u0113\3\2\2\2\u0115\u0114\3\2\2\2\u0116\u0119\3\2\2\2\u0117"+
 		"\u0115\3\2\2\2\u0117\u0118\3\2\2\2\u0118\u011b\3\2\2\2\u0119\u0117\3\2"+

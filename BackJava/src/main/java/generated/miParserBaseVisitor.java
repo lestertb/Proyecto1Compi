@@ -1,4 +1,4 @@
-// Generated from C:/Users/marco/OneDrive/Escritorio/New folder (3)/proyecto1compi/BackJava/src/main/java\miParser.g4 by ANTLR 4.9.1
+// Generated from C:/Users/Lester Trejos/Documents/Compi/RepoProyecto1/proyecto1compi/BackJava/src/main/java\miParser.g4 by ANTLR 4.9.1
 package generated;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 

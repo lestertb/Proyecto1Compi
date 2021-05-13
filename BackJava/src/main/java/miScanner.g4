@@ -56,7 +56,7 @@ RETURN: 'return';
 CLASS: 'class';
 PRINT: 'print';
 NEW: 'new';
-LENGTH: 'lenght';
+LENGTH: 'length';
 
 ID: UNDERSC | LETTER (UNDERSC | LETTER | DIGIT)*;
 

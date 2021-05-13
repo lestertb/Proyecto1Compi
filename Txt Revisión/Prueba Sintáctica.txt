@@ -1,0 +1,147 @@
+int MAX;
+MAX = 10; 
+
+//EN ESTE BLOQUE DE CÓDIGO NUESTRO PROYECTO (PARSER) DETECTA VARIOS ERRORES:
+// 1. NO ESTÁ CONTEMPLADO EL PUBLIC ANTES DE LAS DECLARACIONES EN LOS MÉTODOS O FUNCIONES
+// 2. TODA DECLARACIÓN IF O ELSE DEBE LLEVAR LLAVES "{}" PARA ABRIR Y CERRAR ESCRIBIENDO EL CÓDIGO DENTRO DE ELLAS
+//----VERSIÓN ORIGINAL----
+public int ComputeFac(int num) {
+	int num_aux;
+	if (num < 1)
+		num_aux = 1;
+	else
+		num_aux = num * (ComputeFac(num-1));
+
+	return num_aux;
+}
+//------------------------
+
+//----VERSIÓN CORREGIDA (FUNCIONAL PARA EL PROYECTO)----
+int ComputeFac(int num) {
+	int num_aux;
+	if (num < 1){
+		num_aux = 1;
+        }
+	else
+            {
+		num_aux = num * (ComputeFac(num-1));
+            }
+
+	return num_aux;
+}
+
+//------------------------
+
+int[] arreglo = new int[3];
+arreglo[0] = 10;
+arreglo[1] = 20;
+arreglo[2] = 30;
+
+//EN ESTE BLOQUE DE CÓDIGO NUESTRO PROYECTO (PARSER) DETECTA VARIOS ERRORES:
+// 1. ERROR PORQUE NO ES VÁLIDO .length EN ESA EXPRESIÓN DE ESA FORMA
+// 2. LA PALABRA NEW SOLICITA OTRA ESTRUCTURA
+//----VERSIÓN ORIGINAL----
+int imprimir(){
+	print("Este es el resultado: " + (operaciones(arreglo[2],10.10))); 
+	return func(4,arreglo[(new real[4]).length]);  
+}
+//------------------------
+
+//----VERSIÓN CORREGIDA (FUNCIONAL PARA EL PROYECTO)----
+int imprimir(){
+	print("Este es el resultado: " + (operaciones(arreglo[2],10.10))); 
+        int[] real= new int[4];
+	return func(4,arreglo[real.lenght]);  
+}
+
+
+
+//EN ESTE BLOQUE DE CÓDIGO NUESTRO PROYECTO (PARSER) DETECTA VARIOS ERRORES:
+// 1. POR LA ESTRUCTURA APLICADA AL PARSER, LAS CLASES DEBEN TERMINAR CON ";" DESPUÉS DE LA LLAVE QUE CIERRA LA CLASE
+// 2. EL SIMBOLO "!" NO ESTÁ CONTEMPLADO PARA QUE FUNCIONE PARA ALTERAR UN "true", ESTÁ CONTEMPLADO PARA OTROS USOS
+// 3. LA CLASE SOLICITA QUE DENTRO DE ELLA LAS VARIABLES CREADAS NO SE CIERREN CON ";"
+// 4. EL PARSER NO CONTEMPLA LA CREACIÓN DE ARREGLOS DENTRO DE UNA CLASE
+//----VERSIÓN ORIGINAL----
+class hola{
+	boolean b = !true;
+    	int x;
+    	int[] a;
+}
+//------------------------
+
+//----VERSIÓN CORREGIDA (FUNCIONAL PARA EL PROYECTO)----
+class hola{
+	boolean b = false
+    	int x
+};
+
+
+//EN ESTE BLOQUE DE CÓDIGO NUESTRO PROYECTO (PARSER) DETECTA VARIOS ERRORES:
+// 1. EL SIMBOLO "%" NO ESTÁ CONTEMPLADO
+// 2. EL SIMBOLO "!" NO ES FUNCIONAL EN EL CONTEXTO DEL WHILE QUE SE UTILIZÓ
+// 3. EL SIMBOLO "&&" NO ESTÁ CONTEMPLADO
+//----VERSIÓN ORIGINAL----
+int operaciones(int op1, int op2){
+	int i;
+	int result;
+   
+	i = 10%; 
+
+	arreglo = new int[Fac.MAX]; 
+
+	while (!(i < 0))
+		arreglo[i] = i;
+
+	if ((op1 < 1) && (op2 < 0)){
+		result = (op1 + new int[2]) * (op2 - new int[5]);
+	}
+	else
+	{
+		result = 1;
+	}
+   
+	i = Read();
+	print(i);
+
+	hola inst;
+	inst = new hola();
+	inst.a = 30;	
+
+	return result;	
+}
+//------------------------
+
+//----VERSIÓN CORREGIDA (FUNCIONAL PARA EL PROYECTO)----
+
+int operaciones(int op1, int op2){
+	int i;
+	int result;
+   
+	arreglo = new int[Fac.MAX]; 
+
+	while (i >= 0){
+		arreglo[i] = i;
+	}
+
+	if (op1 < 1){
+		if(op2 < 0){
+		  result = (op1 + new int[2]) * (op2 - new int[5]);
+		}
+	}
+	else
+	{
+		result = 1;
+	}
+   
+	i = Read();
+	print(i);
+
+	hola inst;
+	inst = new hola();
+	inst.a = 30;	
+
+	return result;	
+}
+
+
+
